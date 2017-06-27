@@ -1,1 +1,2 @@
-# metaboanalystrA R package for MetaboAnalyst
+# metaboanalystr
+# A R package for MetaboAnalyst
