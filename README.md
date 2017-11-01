@@ -37,12 +37,10 @@ metanr_packages <- function(){
   }
   print("No new packages added...")
 }
-
 ```
 Usage of function:
 ```
 metanr_packages()
-
 ```
 
 ### Installing the package
@@ -54,7 +52,6 @@ To install the package, open R and enter:
 ```
 install.packages("devtools")
 library(devtools)
-
 ```
 ## Usage
 
