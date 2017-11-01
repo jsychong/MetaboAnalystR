@@ -1,3 +1,5 @@
+## MetaboAnalystR
+
 <p align="center">
   <img src="https://github.com/jsychong/MetaboAnalystR/blob/master/docs/metaboanalyst_logo.png">
 </p>
