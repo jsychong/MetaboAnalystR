@@ -69,7 +69,7 @@ browseVignettes("MetaboAnalystR")
 
 ## Citation
 
-MetaboAnalystR has been developed by Jasmine Chong and Jeff Xia at McGill University. (xia-lab)
+MetaboAnalystR has been developed by the [XiaLab](http://www.xialab.ca/) at McGill University. 
 
 If you use the R package, please cite: ###
 
