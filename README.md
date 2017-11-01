@@ -58,7 +58,17 @@ library(devtools)
 ```
 ## Usage
 
-For detailed tutorials on how to use MetaboAnalystR, please refer to the R package vignettes - vignette(package="MetaboAnalystR"). 
+For detailed tutorials on how to use MetaboAnalystR, please refer to the R package vignettes 
+
+Within R:
+```
+vignette(package="MetaboAnalystR")
+```
+
+Within a web-browser:
+```
+browseVignettes("MetaboAnalystR")
+```
 
 ## Citation
 
