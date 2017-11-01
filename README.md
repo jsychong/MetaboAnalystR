@@ -1,3 +1,10 @@
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
 # MetaboAnalystR: An R package for comprehensive analysis of metabolomics data
 
 <p align="center">
@@ -16,7 +23,7 @@ To install package dependencies, enter the R function (metanr_packages) and then
 
 
 Function to download packages:
-```
+```{r, echo=T, eval=F, tidy=T}
 metanr_packages <- function(){
   
   cran_pkg <- c("Rserve", "RColorBrewer", "xtable", "som", "ROCR", "RJSONIO", "gplots", "e1071", "caTools", "igraph", "randomForest", "Cairo", "pls", "pheatmap", "lattice", "rmarkdown", "knitr", "data.table", "pROC", "Rcpp", "caret", "ellipse", "scatterplot3d")
@@ -43,7 +50,7 @@ metanr_packages <- function(){
 }
 ```
 Usage of function:
-```
+```{r, echo=T, eval=F, tidy=T}
 metanr_packages()
 ```
 
@@ -53,7 +60,7 @@ MetaboAnalystR is freely available from GitHub. The package documentation, inclu
 
 To install the package, open R and enter:
 
-```
+```{r, echo=T, eval=F, tidy=T}
 install.packages("devtools")
 library(devtools)
 ```
@@ -62,12 +69,12 @@ library(devtools)
 For detailed tutorials on how to use MetaboAnalystR, please refer to the R package vignettes 
 
 Within R:
-```
+```{r, echo=T, eval=F, tidy=T}
 vignette(package="MetaboAnalystR")
 ```
 
 Within a web-browser:
-```
+```{r, echo=T, eval=F, tidy=T}
 browseVignettes("MetaboAnalystR")
 ```
 
