@@ -2,11 +2,54 @@
 
 ## Description 
 
-This package contains the R functions and libraries underlying the popular MetaboAnalyst web server, including 500 functions for data processing, normalization, statistical analysis, metabolite set enrichment analysis, metabolic pathway analysis, and biomarker analysis. The package is synchronized with the web server. After installing and loading the package, users will be able to reproduce the same results from their local computers using the corresponding R command history downloaded from MetaboAnalyst, to achieve maximum flexibility and reproducibility.
+**MetaboAnalystR** contains the R functions and libraries underlying the popular MetaboAnalyst web server, including 500 functions for data processing, normalization, statistical analysis, metabolite set enrichment analysis, metabolic pathway analysis, and biomarker analysis. The package is synchronized with the web server. After installing and loading the package, users will be able to reproduce the same results from their local computers using the corresponding R command history downloaded from MetaboAnalyst, to achieve maximum flexibility and reproducibility.
 
-## Installation 
+## Getting Started
 
-To install MetaboAnalystR...
+To use MetaboAnalystR, first install all package dependencies. Ensure that you are able to download packages from bioconductor. 
+
+To install package dependencies, enter the R function (metanr_packages) and then use the function. A printed message will appear informing you whether or not any R packages were installed. 
+
+```{r, eval=FALSE}
+
+## R function
+
+metanr_packages <- function(){
+  
+  cran_pkg <- c("Rserve", "RColorBrewer", "xtable", "som", "ROCR", "RJSONIO", "gplots", "e1071", "caTools", "igraph", "randomForest", "Cairo", "pls", "pheatmap", "lattice", "rmarkdown", "knitr", "data.table", "pROC", "Rcpp", "caret", "ellipse", "scatterplot3d")
+  bioconductor_pkg <- c("xcms", "impute", "pcaMethods", "siggenes", "globaltest", "GlobalAncova", "Rgraphviz", "KEGGgraph", "preprocessCore", "genefilter", "SSPA", "sva")
+  
+  list_installed <- installed.packages()
+  
+  new_cran <- subset(cran_pkg, !(cran_pkg %in% list_installed[, "Package"]))
+  
+  if(length(new_cran)!=0){
+    install.packages(new_cran, dependencies = TRUE)
+    print(c(new_cran, " packages added..."))
+  }
+  
+  new_bio <- subset(bioconductor_pkg, !(bioconductor_pkg %in% list_installed[, "Package"]))
+  
+  if(length(new_bio)!=0){
+    
+    source("https://bioconductor.org/biocLite.R")
+    biocLite(new_bio, dependencies = TRUE, ask = FALSE)
+    print(c(new_bio, " packages added..."))
+  }
+  print("No new packages added...")
+}
+
+## Usage
+
+metanr_packages()
+
+```
+
+### Installing the package
+
+MetaboAnalystR is freely available from GitHub. The package documentation, including the vignettes for each module and user manual is available within the downloaded R package file.
+
+To install the package, open R and enter:
 
 ```{r, eval=FALSE}
 
@@ -14,39 +57,21 @@ install.packages("devtools")
 library(devtools)
 
 ```
+## Usage
 
-Imports: Rserve,
-    ellipse,
-    scatterplot3d,
-    pls,
-    caret,
-    lattice,
-    Cairo,
-    randomForest,
-    igraph,
-    caTools,
-    e1071,
-    gplots,
-    som,
-    xtable,
-    RColorBrewer,
-    xcms,
-    impute,
-    pcaMethods,
-    RJSONIO,
-    ROCR,
-    siggenes,
-    globaltest,
-    GlobalAncova,
-    Rgraphviz,
-    KEGGgraph,
-    preprocessCore,
-    genefilter,
-    pheatmap,
-    SSPA,
-    sva,
-    Rcpp,
-    pROC,
-    data.table
-Suggests: knitr,
-    rmarkdown
+For detailed tutorials on how to use MetaboAnalystR, please refer to the R package vignettes - vignette(package="MetaboAnalystR"). 
+
+## Citation
+
+MetaboAnalystR has been developed by Jasmine Chong and Jeff Xia at McGill University. (xia-lab)
+
+If you use the R package, please cite: ###
+
+## Bugs or feature requests
+
+To inform us of any bugs or requests, please open a new issue. 
+
+
+
+
+
