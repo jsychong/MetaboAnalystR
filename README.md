@@ -10,10 +10,9 @@
 
 ## Getting Started
 
-To use MetaboAnalystR, first install all package dependencies. Ensure that you are able to download packages from bioconductor. 
+### Installing package dependencies 
 
-To install package dependencies, enter the R function (metanr_packages) and then use the function. A printed message will appear informing you whether or not any R packages were installed. 
-
+To use MetaboAnalystR, first install all package dependencies. Ensure that you are able to download packages from bioconductor. To install package dependencies, enter the R function (metanr_packages) and then use the function. A printed message will appear informing you whether or not any R packages were installed. 
 
 Function to download packages:
 ```
