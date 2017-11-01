@@ -10,10 +10,9 @@ To use MetaboAnalystR, first install all package dependencies. Ensure that you a
 
 To install package dependencies, enter the R function (metanr_packages) and then use the function. A printed message will appear informing you whether or not any R packages were installed. 
 
-```{r, eval=FALSE}
 
-## R function
-
+Function to download packages:
+```
 metanr_packages <- function(){
   
   cran_pkg <- c("Rserve", "RColorBrewer", "xtable", "som", "ROCR", "RJSONIO", "gplots", "e1071", "caTools", "igraph", "randomForest", "Cairo", "pls", "pheatmap", "lattice", "rmarkdown", "knitr", "data.table", "pROC", "Rcpp", "caret", "ellipse", "scatterplot3d")
@@ -39,8 +38,9 @@ metanr_packages <- function(){
   print("No new packages added...")
 }
 
-## Usage
-
+```
+Usage of function:
+```
 metanr_packages()
 
 ```
@@ -51,8 +51,7 @@ MetaboAnalystR is freely available from GitHub. The package documentation, inclu
 
 To install the package, open R and enter:
 
-```{r, eval=FALSE}
-
+```
 install.packages("devtools")
 library(devtools)
 
