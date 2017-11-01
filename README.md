@@ -15,7 +15,7 @@
 To use MetaboAnalystR, first install all package dependencies. Ensure that you are able to download packages from bioconductor. To install package dependencies, enter the R function (metanr_packages) and then use the function. A printed message will appear informing you whether or not any R packages were installed. 
 
 Function to download packages:
-```
+```R
 metanr_packages <- function(){
   
   cran_pkg <- c("Rserve", "RColorBrewer", "xtable", "som", "ROCR", "RJSONIO", "gplots", "e1071", "caTools", "igraph", "randomForest", "Cairo", "pls", "pheatmap", "lattice", "rmarkdown", "knitr", "data.table", "pROC", "Rcpp", "caret", "ellipse", "scatterplot3d")
@@ -42,7 +42,7 @@ metanr_packages <- function(){
 }
 ```
 Usage of function:
-```
+```R
 metanr_packages()
 ```
 
@@ -52,7 +52,7 @@ MetaboAnalystR is freely available from GitHub. The package documentation, inclu
 
 To install the package, open R and enter:
 
-```
+```R
 install.packages("devtools")
 library(devtools)
 ```
@@ -61,12 +61,12 @@ library(devtools)
 For detailed tutorials on how to use MetaboAnalystR, please refer to the R package vignettes 
 
 Within R:
-```
+```R
 vignette(package="MetaboAnalystR")
 ```
 
 Within a web-browser:
-```
+```R
 browseVignettes("MetaboAnalystR")
 ```
 
