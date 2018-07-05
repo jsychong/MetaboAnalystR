@@ -5,11 +5,6 @@ mSet<-MSspec.rtCorrection(mSet, 30.0);
 MSspec.fillPeaks(mSet);
 SetupMSdataMatrix(mSet, "into")
 mSet<-PlotMS.RT(mSet, "msrt_1_", "png", 72, width=NA)
-mSet<-Read.MSspec(mSet, 'Replacing_with_your_file_path', 'bin', 30.0, 30.0);
-mSet<-MSspec.rtCorrection(mSet, 30.0);
-MSspec.fillPeaks(mSet);
-SetupMSdataMatrix(mSet, "into")
-mSet<-PlotMS.RT(mSet, "msrt_2_", "png", 72, width=NA)
 mSet<-SanityCheckData(mSet)
 mSet<-RemoveMissingPercent(mSet, percent=0.5)
 mSet<-ImputeVar(mSet, method="min")
